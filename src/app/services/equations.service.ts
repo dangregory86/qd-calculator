@@ -3,9 +3,9 @@ import { Injectable } from '@angular/core';
 @Injectable({
 	providedIn: 'root'
 })
-export class EquationsService {
+export class EquationServiceOneOne {
 	constructor() {}
-
+	// TODO refactor
 	public calcD1(dist: number) {
 		let answer = dist / 0.35;
 		answer = answer ** 3;
@@ -127,5 +127,61 @@ export class EquationsService {
 		let answer = dist / 6;
 		answer = answer ** 3;
 		return answer;
+	}
+}
+
+export class EquationServiceOneTwo {
+	public calc(d: string, dist: number) {
+		let answer = 0;
+		switch (d) {
+			case 'D1':
+				answer = dist / 0.22;
+				return answer ** 2;
+			case 'D2':
+				answer = dist / 3.2;
+				return answer ** 3;
+			case 'D3':
+				answer = dist / 4.3;
+				return answer ** 3;
+			case 'D4':
+				answer = dist / 6.4;
+				return answer ** 3;
+			case 'D5':
+				answer = dist / 0.22;
+				return answer ** 2;
+			case 'D6':
+				answer = dist / 3.2;
+				return answer ** 3;
+			case 'D7':
+				answer = dist / 4.3;
+				return answer ** 3;
+			case 'D8':
+				answer = dist / 6.4;
+				return answer ** 3;
+			default:
+				console.log('Equation service 1.3, error');
+		}
+	}
+}
+
+export class EquationServiceOneThree {
+	public calc(d: string, dist: number) {
+		let answer = 0;
+		switch (d) {
+			case 'D1':
+				answer = dist / 0.22;
+				return answer ** 2;
+			case 'D2':
+				answer = dist / 3.2;
+				return answer ** 3;
+			case 'D3':
+				answer = dist / 4.3;
+				return answer ** 3;
+			case 'D4':
+				answer = dist / 6.4;
+				return answer ** 3;
+			default:
+				console.log('Equation service 1.3, error');
+		}
 	}
 }

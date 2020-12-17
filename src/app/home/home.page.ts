@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { EquationsService } from '../services/equations.service';
+import { EquationServiceOneOne } from '../services/equations.service';
+import { OneoneService } from '../services/oneone.service';
 
 @Component({
 	selector: 'app-home',
@@ -25,17 +26,17 @@ export class HomePage {
 		'Process building - with protective roof - traversed',
 		'Process building - without protective roof - traversed',
 		'Process building - traversed',
-		'Transfer shed 10 persons traversed',
-		'Transfer shed 10 persons traversed',
-		'Transfer shed 10 persons untraversed',
-		'Transfer shed 10 persons untraversed',
+		'Transfer shed < 10 persons traversed',
+		'Transfer shed > 10 persons traversed',
+		'Transfer shed < 10 persons untraversed',
+		'Transfer shed > 10 persons untraversed',
 		'Low density usage roads',
 		'Medium density usage roads',
 		'High density usage roads',
 		'Inhabited building or place of assembly',
 		'Vulnerable constructions',
-		'Office - 20 persons',
-		'Office - 20 persons',
+		'Office - < 20 persons',
+		'Office - >= 20 persons',
 		'Office or amenity changing facility',
 		'Overhead power grid - Supergrid',
 		'Overhead power grid - Normal',
@@ -49,7 +50,10 @@ export class HomePage {
 		'Boiler houses - Unmanned, local'
 	];
 
-	constructor(private equatinService: EquationsService) {}
+	constructor(private equatinService: EquationServiceOneOne, private oneoneService: OneoneService) {}
 
-	calculate() {}
+	calculate() {
+		console.log(this.esItems[7], this.oneoneService.checkDistance('pes-ir', this.esItems[7], 450));
+		console.log(this.esItems[25], this.oneoneService.checkDistance('pes-ir', this.esItems[25], 1000));
+	}
 }

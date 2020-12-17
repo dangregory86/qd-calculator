@@ -1,16 +1,16 @@
 import { TestBed } from '@angular/core/testing';
 
-import { EquationsService } from './equations.service';
+import { EquationServiceOneOne } from './equations.service';
 
 describe('EquationsService', () => {
-  let service: EquationsService;
+	let service: EquationServiceOneOne;
 
-  beforeEach(() => {
-    TestBed.configureTestingModule({});
-    service = TestBed.inject(EquationsService);
-  });
+	beforeEach(() => {
+		TestBed.configureTestingModule({});
+		service = TestBed.inject(EquationServiceOneOne);
+	});
 
-  it('should be created', () => {
-    expect(service).toBeTruthy();
-  });
+	it('should be created', () => {
+		expect(service).toBeTruthy();
+	});
 });
