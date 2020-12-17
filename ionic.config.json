@@ -1,5 +1,7 @@
 {
   "name": "QD Calculator",
-  "integrations": {},
+  "integrations": {
+    "capacitor": {}
+  },
   "type": "angular"
 }
